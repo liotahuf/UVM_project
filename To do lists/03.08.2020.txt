@@ -1,0 +1,8 @@
+To do :
+
+- Kick start reference model in matlab - Liora
+- Kick start UVM modules - Edi
+- Learn about Assertioning - Edi
+- Learn how to integrate matlab code in UVM - Liora
+- Kick star project report - Liora
+
