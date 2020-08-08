@@ -17,5 +17,5 @@ bin(div_fixed)
 
 %% convergence check fixed point creator
 rand_num =-2 + 4*rand;
-fixed_point_rand = fi(rand_num,1,22,10); 
+fixed_point_rand = fi(rand_num,1,13,10); 
 bin(fixed_point_rand);

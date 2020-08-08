@@ -7,18 +7,19 @@ function [finalCent] = refModel(inputMatrix,inputCent)
 %   and returns the 8 centroids in a vector, also in fixed point
 %   
 %% convert matrix to double
-pointMatrix = inputMatrix
-for c =1:8
-    for l=1:size(inputMatrix,1)
-        pointMatrix(l,c)=q2dec(inputMatrix(l,c),2,10,'bin');
+pointMatrix = zeros(size(inputMatrix,1),7);
+
+for l=1:size(inputMatrix,1)
+    for  c =1:7
+        pointMatrix(l,c)=q2dec(inputMatrix(l,[1+13*(c-1):c*13]),2,10,'bin');
     end
 end
 
-initialCent = inputCent;
+initialCent = zeros(8,7);
 
-for c=1:7
-    for l=1:8
-        initialCent(l,c)= q2dec(inputCent(l,c),2,10,'bin');
+for l=1:8
+    for c=1:7
+        initialCent(l,c)= q2dec(inputCent(l,[1+13*(c-1):c*13]),2,10,'bin');
     end
 end
 
@@ -37,11 +38,12 @@ end
 
 %% convert centroid vector to fixed point
 
-finalCent = inputCent;
-for c=1:7
-    for l=1:8
-        finalCent(l,c)= dec2q(R_round(l,c),2,10,'bin');
+
+for l=1:8
+    for  c =1:7
+        finalCent(l,[1+13*(c-1):c*13])=dec2q(R_round(l,c),2,10,'bin');
     end
 end
+
 end
 
