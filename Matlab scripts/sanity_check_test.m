@@ -11,8 +11,8 @@ D =D+0x12;
 expected_accum = sum([11:1:18]);
 expected_res = expected_accum/8;
 expected_res_bin = dec2bin(expected_res,13);
-expected_fixed_point_res = q2dec(expected_fixed_point_res_bin,2,10,'bin');
-expected_hex_res = bin2hex(expected_fixed_point_res_bin);
+expected_fixed_point_res = q2dec(expected_res_bin,2,10,'bin');
+%expected_hex_res = bin2hex(expected_fixed_point_res_bin);
 
 our_res_dec =idivide(D,8);
 our_res_dec_bin = dec2bin(our_res_dec,13);
@@ -50,6 +50,15 @@ end
 [idx,R] = kmeans(X,[],'Display','iter','EmptyAction','drop','Distance','cityblock','start',C);
 
 R_round =round(R,4);
+for l=1:8
+    for c=1:7
+         if isnan(R_round(l,c))
+             R_round(l,c) = C(l,c);
+             
+         end
+    end
+end
+    
 toc
 
 %% actual results conversion
