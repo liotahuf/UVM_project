@@ -1,0 +1,9 @@
+package Kmeans_pkg;
+	import uvm_pkg::*;
+
+	`include "/users/epedlh/TODO/Kmeans_sequencer.sv"
+	`include "/users/epedlh/TODO/Kmeans_driver.sv"
+	`include "/users/epedlh/TODO/Kmeans_agent.sv"
+	`include "/users/epedlh/TODO/Kmeans_env.sv"
+	`include "/users/epedlh/TODO/Kmeans_test.sv"
+endpackage: Kmeans_pkg
