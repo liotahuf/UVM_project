@@ -1,0 +1,58 @@
+Originally copied from Ver_MLExpt_for_Cov.tar
+
+
+-cm_cond allops+anywidth+event -cm_noconst \
+-cm line+cond+fsm+branch+tgl -cm_dir ./coverage.vdb \
+
+-cm line|cond|fsm|tgl|branch|assert
+   Specifies compiling for the specified type or types of coverage.
+   The arguments specifies the types of coverage:
+   line   Compile for line or statement coverage.
+   cond   Compile for condition coverage.
+   fsm    Compile for FSM coverage.
+   tgl    Compile for toggle coverage.
+   branch Compile for branch coverage
+   assert Compile for SystemVerilog assertion coverage.
+
+   If you want VCS to compile for more than one type of coverage,
+   use the plus (+) character as a delimiter between arguments,
+   for example:
+   -cm line+cond+fsm+tgl
+
+-cm_cond <arguments>
+   Modifies condition coverage as specified by the argument or
+   arguments:
+   basic     Only logical conditions and no multiple conditions.
+   std       The default: only logical, multiple, sensitized conditions.
+   full      Logical and non-logical, multiple conditions, no sensitized
+             conditions.
+   allops    Logical and non-logical conditions.
+   event     Signals in event controls in the sensitivity list position
+             are conditions.
+   anywidth  Enables conditions that need more than 32 bits.
+   for       Enables conditions if for loops.
+   tf        Enables conditions in user-defined tasks and functions.
+   sop       Condition SOP coverage instead of sensitized conditions.
+             also tells VCS that when it reads conditional expressions
+             that contain the ^ bitwise XOR and ~^ bitwise XNOR
+             operators, it reduces the expression to negation and
+             logical AND or OR.
+   You can specify more than one argument. If you do use the + plus
+   delimiter between arguments, for example:
+   -cm_cond basic+allops
+
+-cm_noconst
+   Tells VCS not to monitor for conditions that can never be met or
+   lines that can never execute because a signal is permanently at
+   a 1 or 0 value.
+
+
+-cm_dir <directory_path_name>
+   Specifies an alternative name and location for the coverage
+   database directory.
+
+
+With Condition coverage the possible outcomes of (“true” or “false”) for each
+condition are tested at least once. This means that each individual condition
+is one time true and false. In other words we cover all conditions, hence
+condition coverage.

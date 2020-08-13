@@ -1,0 +1,4 @@
+#!/bin/csh
+mkdir ../$1
+cp -r Factory  HammingPhases  HammingRef  HammingStart  ML_Constr  ML_Cov  ML_tlm ../$1
+cp Report_Template_UVM.odt ../$1/$1.odt
