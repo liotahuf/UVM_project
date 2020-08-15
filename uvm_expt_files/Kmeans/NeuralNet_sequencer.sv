@@ -2,7 +2,32 @@ class Centroids_transaction extends uvm_sequence_item;
 	logic [90:0] centroid;
 endclass: Centroids_transaction
 
-class Kmeans_transaction extends uvm_sequence_item;
+class Write_Ram_transaction extends uvm_sequence_item;
+	//made of apb write of ram addr, afterwards apb write of ram data
+endclass: Write_Ram_transaction
+
+class APB_read_transaction extends uvm_sequence_item;
+	
+	//TODO:
+	//gen amount of data points - restricted to RAM size
+	//gen data points according to amount gen'd before
+	//then push them inside and work it out
+	
+	//input
+	logic [71:0] InputImage;
+	//output
+	logic [7:0][90:0] centroids;
+	
+	function new(string name = "");
+		super.new(name);
+	endfunction: new
+
+	`uvm_object_utils_begin(Kmeans_transaction)
+		`uvm_field_int(InputImage, UVM_ALL_ON)
+	`uvm_object_utils_end
+endclass: APB_read_transaction
+
+class APB_write_transaction extends uvm_sequence_item;
 	
 	//TODO:
 	//gen amount of data points - restricted to RAM size
