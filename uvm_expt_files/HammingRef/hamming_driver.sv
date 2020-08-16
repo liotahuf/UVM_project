@@ -23,9 +23,9 @@ class hamming_driver extends uvm_driver#(hamming_transaction);
 
 		forever begin
 			begin
-	                   seq_item_port.get_next_item(hm_tx);
-                           `uvm_info("hm_sequence", hm_tx.sprint(), UVM_LOW);
-                           vif.sig_x = hm_tx.x;
+				   seq_item_port.get_next_item(hm_tx);
+					   `uvm_info("hm_sequence", hm_tx.sprint(), UVM_LOW);
+					   vif.sig_x = hm_tx.x;
 			end
 
 			@(posedge vif.sig_clock)
