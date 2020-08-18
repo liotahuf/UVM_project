@@ -1,0 +1,24 @@
+To do from last time:
+
+To do :
+
+- Kick start reference model in matlab - Liora
+- Kick start UVM modules - Edi
+- Learn about Assertioning - Edi
+- Learn how to integrate matlab code in UVM - Liora
+
+
+What has benn done:
+- Kick start reference model in matlab - Liora
+- Kick start UVM modules - Edi
+
+
+Task for next week:
+
+- Learn how to integrate matlab code in UVM,:write questions about the instrcutions and send them to goel - Liora
+- Try to make refModel in sv - Liora
+- Learn about Assertioning - Edi
+- Kick star project report - Liora
+- Make tb like las projetc, writting 8 centroids to DUT. - Edi
+-Make trabsaction,sequence,seuqence and driver in order to write 8 centroids to DUT in UVM enviroment
+-Compare two centroids writes -edi
