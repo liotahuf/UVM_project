@@ -1,16 +1,15 @@
 /*------------------------------------------------------------------------------
- * File          : Kmeans_if.v
+ * File          : Kmeans_if.sv
  * Project       : UVMprj
  * Author        : epedlh
- * Creation date : Aug 18, 2020
+ * Creation date : Aug 19, 2020
  * Description   :
  *------------------------------------------------------------------------------*/
+/*`define addrWidth 9
+`define dataWidth 91*/
 
-/*module Kmeans_if #() ();
-
-endmodule*/
-
-interface Kmeans_if #(
+interface Kmeans_if;
+/*#(
 parameter
 tc_mode           = 1,
 	rem_mode          =1,
@@ -27,18 +26,20 @@ tc_mode           = 1,
 	ram_word_len      = 50,
 	reg_amount        = 8
 )
-/*(
-	input clk;
-)*/
+()*/
 
 
 //inputs to DUT
-logic	clk, rst_n;
-logic	pwrite, psel, penable
-logic 	[addrWidth-1:0] paddr;
-logic  	[dataWidth-1:0] pwdata;
+logic	clk;
+logic	rst_n;
+logic	pwrite;
+logic	psel;
+logic	penable;
+logic 	[9-1:0] paddr;//addrWidth = 9
+logic  	[91-1:0] pwdata;//dataWidth = 91
 //outputs from DUT
-logic	pready, interupt;
-logic  	[dataWidth-1:0] prdata;
+logic	pready;
+logic 	interupt;
+logic  	[91-1:0] prdata;//dataWidth = 91
 
 endinterface : Kmeans_if

@@ -1,17 +1,13 @@
 /*------------------------------------------------------------------------------
- * File          : Kmeans_env.v
+ * File          : Kmeans_env.sv
  * Project       : UVMprj
  * Author        : epedlh
- * Creation date : Aug 18, 2020
+ * Creation date : Aug 19, 2020
  * Description   :
  *------------------------------------------------------------------------------*/
 
-/*module Kmeans_env #() ();
-
-endmodule*/
-
 class Kmeans_env extends uvm_env;
-	`uvm_component_utils(NeuralNet_env)
+	`uvm_component_utils(Kmeans_env)
 
 	Kmeans_agent 		kmeans_agent;
 	Kmeans_scoreboard 	kmeans_sb;
@@ -29,7 +25,7 @@ class Kmeans_env extends uvm_env;
 	function void connect_phase(uvm_phase phase);
 		super.connect_phase(phase);
 		kmeans_agent.agent_ap_dut.connect(kmeans_sb.sb_export_dut);
-		kmeans_agent.agent_ap_ref.connect(kmeans_sb.sb_export_ref);
+		//kmeans_agent.agent_ap_ref.connect(kmeans_sb.sb_export_ref);
 		`uvm_info("", "Connect Phase of kmeans_env", UVM_MEDIUM);
 	endfunction: connect_phase
 

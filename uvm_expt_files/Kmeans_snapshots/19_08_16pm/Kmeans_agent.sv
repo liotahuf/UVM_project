@@ -1,14 +1,11 @@
 /*------------------------------------------------------------------------------
- * File          : Kmeans_agent.v
+ * File          : Kmeans_agent.sv
  * Project       : UVMprj
  * Author        : epedlh
- * Creation date : Aug 18, 2020
+ * Creation date : Aug 19, 2020
  * Description   :
  *------------------------------------------------------------------------------*/
-/*
-module Kmeans_agent #() ();
 
-endmodule*/
 
 class Kmeans_agent extends uvm_agent;
 	`uvm_component_utils(Kmeans_agent)
@@ -16,7 +13,7 @@ class Kmeans_agent extends uvm_agent;
 	uvm_analysis_port#(APB_transaction) agent_ap_dut;
 	uvm_analysis_port#(APB_transaction) agent_ap_ref;
 
-	Kmeans_sequence		kmeans_seqr;
+	Kmeans_sequencer	kmeans_seqr;
 	Kmeans_driver		kmeans_drvr;
 	Kmeans_monitor_dut  kmeans_mon_dut;
 	Kmeans_monitor_ref  kmeans_mon_ref;

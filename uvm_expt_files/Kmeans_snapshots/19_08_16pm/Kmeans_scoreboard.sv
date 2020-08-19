@@ -1,11 +1,10 @@
 /*------------------------------------------------------------------------------
- * File          : Kmeans_scoreboard.v
+ * File          : Kmeans_scoreboard.sv
  * Project       : UVMprj
  * Author        : epedlh
- * Creation date : Aug 18, 2020
+ * Creation date : Aug 19, 2020
  * Description   :
  *------------------------------------------------------------------------------*/
-
 /*module Kmeans_scoreboard #() ();
 
 endmodule*/
@@ -16,14 +15,14 @@ endmodule*/
 class Kmeans_scoreboard extends uvm_scoreboard;
 	`uvm_component_utils(Kmeans_scoreboard)
 
-	uvm_analysis_export #(Kmeans_transaction) sb_export_dut;
-	uvm_analysis_export #(Kmeans_transaction) sb_export_ref;
+	uvm_analysis_export #(APB_transaction) sb_export_dut;
+	uvm_analysis_export #(APB_transaction) sb_export_ref;
 
-	uvm_tlm_analysis_fifo #(Kmeans_transaction) dut_fifo;
-	uvm_tlm_analysis_fifo #(Kmeans_transaction) ref_fifo;
+	uvm_tlm_analysis_fifo #(APB_transaction) dut_fifo;
+	uvm_tlm_analysis_fifo #(APB_transaction) ref_fifo;
 
-	Kmeans_transaction transaction_dut;
-	Kmeans_transaction transaction_ref;
+	APB_transaction transaction_dut;
+	APB_transaction transaction_ref;
 
 	function new(string name, uvm_component parent);
 		super.new(name, parent);

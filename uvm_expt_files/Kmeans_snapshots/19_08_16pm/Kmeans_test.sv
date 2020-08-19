@@ -1,14 +1,10 @@
 /*------------------------------------------------------------------------------
- * File          : Kmeans_test.v
+ * File          : Kmeans_test.sv
  * Project       : UVMprj
  * Author        : epedlh
- * Creation date : Aug 18, 2020
+ * Creation date : Aug 19, 2020
  * Description   :
  *------------------------------------------------------------------------------*/
-
-/*module Kmeans_test #() ();
-
-endmodule*/
 
 class Kmeans_test extends uvm_test;
 	`uvm_component_utils(Kmeans_test)

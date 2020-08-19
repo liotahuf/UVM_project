@@ -1,17 +1,18 @@
 /*------------------------------------------------------------------------------
- * File          : Kmeans_test_tb.v
+ * File          : Kmeans_test_tb.sv
  * Project       : UVMprj
  * Author        : epedlh
- * Creation date : Aug 18, 2020
+ * Creation date : Aug 19, 2020
  * Description   :
  *------------------------------------------------------------------------------*/
+`include "Kmeans_pkg.sv"
+`include "k_means_top.sv"
+`include "Kmeans_if.sv"
+`include "Kmeans_Ref_if.sv"
 
-/*module Kmeans_test_tb #() ();
-
-endmodule*/
 
 //`include "/users/goel/synopsys78/uvm/Expt/Ver_MLExpt/src/NeuralNet_pkg.sv"
-module NeuralNet_tb_uvm;
+module Kmeans_test_tb;
 import uvm_pkg::*;
 
 //For Ref

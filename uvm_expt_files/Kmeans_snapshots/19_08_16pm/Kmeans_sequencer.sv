@@ -1,8 +1,8 @@
 /*------------------------------------------------------------------------------
- * File          : Kmeans_sequencer.v
+ * File          : Kmeans_sequencer.sv
  * Project       : UVMprj
  * Author        : epedlh
- * Creation date : Aug 18, 2020
+ * Creation date : Aug 19, 2020
  * Description   :
  *------------------------------------------------------------------------------*/
 
@@ -10,14 +10,8 @@
 `define dataWidth 91
 `define wordDepth 512
 `define centroid_num 8
-`define reg_amount 8
 
-module Kmeans_sequencer #() ();
-
-endmodule
-
-
-enum logic [reg_amount-1:0] { 
+enum logic [8-1:0] {//8 is reg_amount
 	internal_status_reg,
 	GO_reg,
 	cent_1_reg,
@@ -35,22 +29,6 @@ enum logic [reg_amount-1:0] {
 	threshold_reg
 } register_num;
 
-/* task write_to_reg_file;
-	input [8-1:0] adress;
-	input [dataWidth-1:0] data;
-	begin
-		paddr = adress;
-		pwdata= data;
-		pwrite = 1;
-		psel=1;
-		#10
-				penable=1;
-		#10
-				psel = 1'b0;
-		penable = 1'b0;
-	end
-endtask */
-
 //transaction under APB protocol
 class APB_transaction extends uvm_sequence_item;
 	bit write;
@@ -62,12 +40,9 @@ class APB_transaction extends uvm_sequence_item;
 		super.new(name);
 	endfunction: new
 
-	`uvm_object_utils_begin(Kmeans_transaction)
+	`uvm_object_utils_begin(APB_transaction)
 		`uvm_field_int(address, UVM_ALL_ON)
 		`uvm_field_int(data, UVM_ALL_ON)
-		//`uvm_field_int(ready, UVM_ALL_ON)
-		//`uvm_field_int(sel, UVM_ALL_ON)
-		//`uvm_field_int(enable, UVM_ALL_ON)
 		`uvm_field_int(write, UVM_ALL_ON)
 	`uvm_object_utils_end
 endclass: APB_transaction
@@ -112,7 +87,7 @@ class Kmeans_in_sequence extends uvm_sequence#(APB_transaction);
 			APB_transaction apb_tx = APB_transaction::type_id::create(.name("apb_tx"), .contxt(get_full_name()));
 			apb_tx.address	= register_num[2+i];//2 is first centroid, until 9 which is last centroid's address
 			apb_tx.write	= 1'b0;
-			apb_tx.data		= 91'b0;
+			apb_tx.data		= 91'b0;//
 			
 			start_item(apb_tx);
 			finish_item(apb_tx);
