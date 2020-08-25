@@ -7,7 +7,7 @@ function [finalCent] = refModel2(inputMatrix,inputCent)
 %   and returns the 8 centroids in a vector, also in fixed point
 %   
 %% convert matrix to double
-
+%codegen
 %cut the rows which are 0
 zeroRowsVector = all(inputMatrix ==0,2);
 zeroRows = sum(zeroRowsVector(:) ==1);

@@ -2,7 +2,7 @@
 ## Makefile generated for MATLAB file/project 'refModel2'. 
 ## 
 ## Makefile     : refModel2_rtw.mk
-## Generated on : Tue Aug 18 11:28:47 2020
+## Generated on : Tue Aug 25 17:41:32 2020
 ## MATLAB Coder version: 4.3 (R2019b)
 ## 
 ## Build Info:

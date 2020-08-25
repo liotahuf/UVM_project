@@ -744,6 +744,7 @@ void refModel2(const short inputMatrix[3584], const short inputCent[56], short
   /*    and returns the 8 centroids in a vector, also in fixed point */
   /*     */
   /*  convert matrix to double */
+  /* codegen */
   /* cut the rows which are 0 */
   for (i = 0; i < 3584; i++) {
     b_inputMatrix[i] = (inputMatrix[i] == 0);
