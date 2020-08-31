@@ -29,6 +29,6 @@ Task for next week:
 
 Questions:
 1. how to use defines - they are not working.
-2. how to build send_apb_transaction function?
+2. how to build send_apb_transaction function? solved by make task instead of function
 3. logic is not able to be defined without error:
 logic [1:0] some_logic; -> error

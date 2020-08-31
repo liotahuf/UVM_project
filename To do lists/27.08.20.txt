@@ -1,0 +1,28 @@
+To do from last time:
+
+To do :
+
+- Kick start reference model in matlab - Liora
+- Kick start UVM modules - Edi
+- Learn about Assertioning - Edi
+- Learn how to integrate matlab code in UVM - Liora
+
+
+What has benn done:
+- Learn about Assertioning - Edi
+- Handle gen of num-points - edi done
+- Add driver handle interupt - probably need to posedge pready for requesting any read - cause before interupt read or write are blocked - Edi done
+
+Task for next week:
+- Learn how to integrate matlab code in UVM,:write questions about the instrcutions and send them to goel - Liora
+- Try to make refModel in sv - Liora
+- Kick star project report- Liora
+we need to understand when to start and with what - probably should ask goel on tuseday about it - 1.9.20
+-reorginize sequencer, kmeans_transaction, driver:
+as discussed with goel today(27.8):
+sequencer only make kmeans_transactions, send them to driver.
+transaction contains 3 generated fields : 8 centorids, num points, data_points(according to just generated num points).
+-in sequncer make sure this is okay not writing both unpacked arrays to factory, which are in kmeans transaction class
+- should arrange SB part which accpets data from monitor_dut and hold 8 centroids.
+Questions:
+1. how to use defines - they are not working as regular as they should.
