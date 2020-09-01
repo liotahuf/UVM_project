@@ -14,69 +14,83 @@ endmodule*/
 
 class Kmeans_scoreboard extends uvm_scoreboard;
 	`uvm_component_utils(Kmeans_scoreboard)
-
+	
 	uvm_analysis_export #(APB_transaction) sb_export_dut;
 	//uvm_analysis_export #(APB_transaction) sb_export_ref;
-
+	
 	uvm_tlm_analysis_fifo #(APB_transaction) dut_fifo;
 	//uvm_tlm_analysis_fifo #(APB_transaction) ref_fifo;
-
+	
 	int num_centroids = 8;
+	
+	APB_transaction dut_tx;
+	
+	logic [91] centroids[1:8];
 
-	APB_transaction dut_txs[];
 	//APB_transaction ref_txs[1:8];
-
-	int i;
+	
+	int i, j;
 	
 	
 	function new(string name, uvm_component parent);
 		super.new(name, parent);
-
-		dut_txs		= new[num_centroids];
-		foreach(dut_txs[i]) dut_txs[i] = APB_transaction::type_id::create("dut_tx");
-
+		
+		
 		//ref_txs		= new("ref_tx");
 	endfunction: new
-
+	
 	function void build_phase(uvm_phase phase);
 		super.build_phase(phase);
-
+		
 		sb_export_dut	= new("sb_export_dut", this);
 		//sb_export_ref	= new("sb_export_ref", this);
 		
 		dut_fifo		= new("dut_fifo", this);
 		//ref_fifo		= new("ref_fifo", this);
 		
-	endfunction: build_phase
+		dut_tx	= APB_transaction::type_id::create(.name("dut_tx"), .contxt(get_full_name()));
 
+		//foreach(dut_txs[i]) dut_txs[i] = APB_transaction::type_id::create("dut_tx");
+		
+	endfunction: build_phase
+	
 	function void connect_phase(uvm_phase phase);
 		sb_export_dut.connect(dut_fifo.analysis_export);
 		//sb_export_ref.connect(ref_fifo.analysis_export);
 	endfunction: connect_phase
-
+	
 	task run();
-		//forever begin
-		
+		`uvm_info("", "run method of Kmeans_scoreboard", UVM_MEDIUM);
 		
 		//TODO - get 8 centroids from REF model
-		//get 8 centroids from DUT
-		for (i=0; i <num_centroids ; i++) begin
-		   `uvm_info("", "run method of Kmeans_scoreboard", UVM_MEDIUM);
-		   dut_fifo.get(dut_txs[i]);
-		   //ref_fifo.get(transaction_ref);
-		   
-		  /* $display("scoreboard, pkt number %d:",i+1,UVM_LOW);
-		   `uvm_info("pkt print:" ,dut_txs[i].sprint(), UVM_LOW)*/
+		
+		//get centroids from DUT, one by one
+		j = 1;
+		forever begin
+			dut_fifo.get(dut_tx);
+			$display("scoreboard, used in fifo = %d:",dut_fifo.used(),UVM_LOW);
+			centroids[j] = dut_tx.data;
+			j++;
+			/*if (dut_fifo.used() >= 9) begin
+				for (i=0; i <num_centroids ; i++) begin
+					dut_fifo.get(dut_tx);
+					`uvm_info("pkt print at run:" ,dut_tx.sprint(), UVM_LOW)
+					
+					$display("scoreboard, used in fifo = %d:",dut_fifo.used(),UVM_LOW);
+				end
+				//compare();
+			end*/
+			compare();
 		end
-		compare();
 		
 	endtask: run
-
+	
 	virtual function void compare();
 		//TODO - need to implement according to how we get output transaction from dut,ref
+		
 		for (i=0; i <num_centroids ; i++) begin
-			$display("scoreboard, pkt number %d:",i+1,UVM_LOW);
-			`uvm_info("pkt print:" ,dut_txs[i].sprint(), UVM_LOW)
+			$display("scoreboard, pkt number %d, pkt = %h:",i+1,centroids[i+1],UVM_LOW);
+			//`uvm_info("pkt print at compare:" ,dut_tx.sprint(), UVM_LOW)
 		end
 		
 	endfunction: compare
