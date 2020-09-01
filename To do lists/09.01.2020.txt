@@ -1,0 +1,2 @@
+Build assettions to check APB protocol
+Try to connect the refMOdel to the UVM env and run the test

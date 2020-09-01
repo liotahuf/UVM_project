@@ -66,17 +66,8 @@ static void b_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u, const
 {
   static const int32_T dims[2] = { 512, 7 };
 
-  int16_T iv[3584];
-  int32_T i;
-  int32_T i1;
   emlrtCheckFiR2012b(sp, parentId, u, false, 2U, dims, eml_mx, b_eml_mx);
-  e_emlrt_marshallIn(emlrtAlias(u), iv);
-  for (i = 0; i < 512; i++) {
-    for (i1 = 0; i1 < 7; i1++) {
-      y[i1 + 7 * i] = iv[i + (i1 << 9)];
-    }
-  }
-
+  e_emlrt_marshallIn(emlrtAlias(u), y);
   emlrtDestroyArray(&u);
 }
 
@@ -96,17 +87,8 @@ static void d_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u, const
 {
   static const int32_T dims[2] = { 8, 7 };
 
-  int16_T iv[56];
-  int32_T i;
-  int32_T i1;
   emlrtCheckFiR2012b(sp, parentId, u, false, 2U, dims, eml_mx, b_eml_mx);
-  f_emlrt_marshallIn(emlrtAlias(u), iv);
-  for (i = 0; i < 8; i++) {
-    for (i1 = 0; i1 < 7; i1++) {
-      y[i1 + 7 * i] = iv[i + (i1 << 3)];
-    }
-  }
-
+  f_emlrt_marshallIn(emlrtAlias(u), y);
   emlrtDestroyArray(&u);
 }
 
@@ -140,28 +122,21 @@ static const mxArray *emlrt_marshallOut(const emlrtStack *sp, const int16_T u[56
 {
   const mxArray *y;
   const mxArray *b_y;
-  int32_T i;
   const mxArray *m;
   static const int32_T iv[2] = { 8, 7 };
 
-  int32_T b_i;
   int16_T *pData;
-  int16_T iv1[56];
+  int32_T i;
+  int32_T b_i;
   int32_T c_i;
   y = NULL;
   b_y = NULL;
-  for (i = 0; i < 7; i++) {
-    for (b_i = 0; b_i < 8; b_i++) {
-      iv1[b_i + (i << 3)] = u[i + 7 * b_i];
-    }
-  }
-
   m = emlrtCreateNumericArray(2, iv, mxINT16_CLASS, mxREAL);
   pData = (int16_T *)emlrtMxGetData(m);
   i = 0;
   for (b_i = 0; b_i < 7; b_i++) {
     for (c_i = 0; c_i < 8; c_i++) {
-      pData[i] = iv1[c_i + (b_i << 3)];
+      pData[i] = u[c_i + (b_i << 3)];
       i++;
     }
   }

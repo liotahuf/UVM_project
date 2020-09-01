@@ -56,7 +56,7 @@ static void argInit_512x7_sfix13_En10(short result[3584])
     for (idx1 = 0; idx1 < 7; idx1++) {
       /* Set the value of the array element.
          Change this value to the value that the application requires. */
-      result[idx1 + 7 * idx0] = argInit_sfix13_En10();
+      result[idx0 + (idx1 << 9)] = argInit_sfix13_En10();
     }
   }
 }
@@ -71,7 +71,7 @@ static void argInit_8x7_sfix13_En10(short result[56])
     for (idx1 = 0; idx1 < 7; idx1++) {
       /* Set the value of the array element.
          Change this value to the value that the application requires. */
-      result[idx1 + 7 * idx0] = argInit_sfix13_En10();
+      result[idx0 + (idx1 << 3)] = argInit_sfix13_En10();
     }
   }
 }
