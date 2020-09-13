@@ -17,7 +17,7 @@ pointMatrix = double(inputMatrix(1:lastPointRow,:));
 initialCent = double(inputCent);
 
 %% do k means
-[idx,R] = kmeans(pointMatrix,8,'EmptyAction','drop','Distance','cityblock','start',initialCent);
+[idx,R] = kmeans(pointMatrix,8,'EmptyAction','drop','Distance','cityblock','Start',initialCent);
 
 %round like this duo to code gen limitation : "Code generation supports only the syntax Y = round(X)."
 R_round =round(R*1000)/1000;
