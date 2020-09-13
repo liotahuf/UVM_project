@@ -1,0 +1,42 @@
+
+To do from last time:
+
+-Try to connect the refMOdel to the UVM env and run the test - DONE ( run sanity check test on both)
+- Build assettions to check APB protocol
+
+To do (in general):
+- adjust Makefile:
+add a file which replace includes from Kmeans_test_tb.sv - to clean line added to run commands in makefile(probably to the VCS).
+
+- run few more tests and brainstorm criterias for scoreboard comapre function behavior.
+afterwards, implement compare function at scoreboard according to criterias.
+
+- according to goel's advice on how to start the writing of the Project Book, start the documentation.
+(might think by ourselfes what should be in there and in what order)
+
+- brainstorm and write an initial Test Line (scenarios list):
+1. find common scenarios for common system verilog problems.
+2. creatively think on scenarios dedicated to our DUT.
+
+
+Task for next week (split missions from To do section above):
+Eddy:
+- adjust Makefile:
+add a file which replace includes from Kmeans_test_tb.sv - to clean line added to run commands in makefile(probably to the VCS).
+
+Liora:
+- according to goel's advice on how to start the writing of the Project Book, start the documentation.
+(might think by ourselfes what should be in there and in what order)
+
+Togheter:
+- run few more tests and brainstorm criterias for scoreboard comapre function behavior.
+afterwards, implement compare function at scoreboard according to criterias.
+
+Questions:
+1. how to use defines - they are not working as regular as they should.
+2. find how to control prints with verbosity/control with enabling per module.
+
+on Hold:
+- Build assettions to check APB protocol
+- in sequncer make sure this is okay not writing both unpacked arrays to factory, which are in kmeans transaction class
+- fix Defines in whole code.
