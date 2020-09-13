@@ -38,3 +38,4 @@ Questions:
 on Hold:
 - Build assettions to check APB protocol
 - in sequncer make sure this is okay not writing both unpacked arrays to factory, which are in kmeans transaction class
+- fix Defines in whole code.
