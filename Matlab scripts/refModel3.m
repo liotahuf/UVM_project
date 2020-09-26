@@ -1,4 +1,4 @@
-function [finalCent] = refModel2(inputMatrix,inputCent)
+function [finalCent] = refModel3(inputMatrix,inputCent)
 %Summary of this function goes here
 %   This function receives a fi matrix and a fi vector of 7 columns , where each line
 %   represents a point in the 7 dim, represented in fixed point(MSB sign, 2
