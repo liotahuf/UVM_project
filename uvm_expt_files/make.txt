@@ -1,0 +1,1029 @@
+vcs -sverilog -full64 -timescale=1ns/1ns +acc +vpi -PP +define+UVM_OBJECT_MUST_HAVE_CONSTRUCTOR +incdir+/tools/synopsys78/FEV/vcs_mx_vN-2017.12-1/etc/uvm-1.2/src /tools/synopsys78/FEV/vcs_mx_vN-2017.12-1/etc/uvm-1.2/src/uvm.sv +incdir+/users/epedlh/UVM_Project/Matlab/codegen/dll/refModel2 -cm line+cond+fsm+branch+tgl -cm_dir ./coverage.vdb /tools/synopsys78/FEV/vcs_mx_vN-2017.12-1/etc/uvm-1.2/src/dpi/uvm_dpi.cc -CFLAGS -DVCS -debug -debug_all +incdir+. Kmeans_test_tb.sv -debug
+
+Warning-[DBG_FLAG_DEP] Debug Option is being Deprecated
+  The '-PP' debug-related option is being deprecated and will no longer be 
+  supported in a future release.
+  Please recompile using the '-debug_access<+options>' switch and incremental 
+  options as required.  Recommended options are '-debug_access' for 
+  post-process debug, '-debug_access+class' for testbench debug, and 
+  '-debug_access+all' for all debug capabilities.  Refer the VCS user guide 
+  for more granular options for debug control under the switch '-debug_access'
+  and refer to '-debug_region' for region control.
+
+                         Chronologic VCS (TM)
+        Version N-2017.12-1_Full64 -- Sat Sep 26 15:55:20 2020
+               Copyright (c) 1991-2017 by Synopsys Inc.
+                         ALL RIGHTS RESERVED
+
+This program is proprietary and confidential information of Synopsys Inc.
+and may be used and disclosed only as authorized in a license agreement
+controlling such use and disclosure.
+
+
+Warning-[DBG_FLAG_DEP] Debug Option is being Deprecated
+  The '+acc' debug-related option is being deprecated and will no longer be 
+  supported in a future release.
+  Please recompile using the '-debug_access<+options>' switch and incremental 
+  options as required.  Recommended options are '-debug_access' for 
+  post-process debug, '-debug_access+class' for testbench debug, and 
+  '-debug_access+all' for all debug capabilities.  Refer the VCS user guide 
+  for more granular options for debug control under the switch '-debug_access'
+  and refer to '-debug_region' for region control.
+
+The design hasn't changed and need not be recompiled. 
+If you really want to, delete file simv.daidir/.vcs.timestamp and
+run VCS again.
+
+./simv +UVM_VERBOSITY=UVM_MEDIUM +UVM_TESTNAME=Kmeans_test +UVM_TR_RECORD +UVM_LOG_RECORD +verbose=1 +ntb_random_seed=311  -l vcs.log -sv_lib /users/epedlh/UVM_Project/Matlab/codegen/dll/refModel2/librefModel2_dpi
+Chronologic VCS simulator copyright 1991-2017
+Contains Synopsys proprietary information.
+Compiler version N-2017.12-1_Full64; Runtime version N-2017.12-1_Full64;  Sep 26 15:55 2020
+UVM_INFO /tools/synopsys78/FEV/vcs_mx_vN-2017.12-1/etc/uvm-1.2/src/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+        SYNCHRONOUS RAM VERILOG BEHAVIOURAL MODEL	 		
+									
+                  Synopsys, Inc.                                    
+                  46871 Bayside Parkway				
+                  Fremont CA 94538					
+							 		
+                  Rev 3.0 Oct. 2003       		 		
+							 		
+ Polaris INFO : Reccommending to use with +ieee +defparam +pulse_x/0
+                +pulse_r/0 +pathpulse +define+verbose_<X> options   
+									
+ Error filtering options description : 			 	
+ +define+verbose_0 : X transitions filtered; no messages printed    
+ +define+verbose_1 : X transitions filtered; error messages printed	
+ +define+verbose_2 : no X transtions filtering; no messages printed	
+ +define+verbose_3 : default : no X filtering; err messages printed 
+									
+ Add +define+nobanner in order not to display these header messages 
+								 	
+        SYNCHRONOUS RAM VERILOG BEHAVIOURAL MODEL	 		
+									
+                  Synopsys, Inc.                                    
+                  46871 Bayside Parkway				
+                  Fremont CA 94538					
+							 		
+                  Rev 3.0 Oct. 2003       		 		
+							 		
+ Polaris INFO : Reccommending to use with +ieee +defparam +pulse_x/0
+                +pulse_r/0 +pathpulse +define+verbose_<X> options   
+									
+ Error filtering options description : 			 	
+ +define+verbose_0 : X transitions filtered; no messages printed    
+ +define+verbose_1 : X transitions filtered; error messages printed	
+ +define+verbose_2 : no X transtions filtering; no messages printed	
+ +define+verbose_3 : default : no X filtering; err messages printed 
+									
+ Add +define+nobanner in order not to display these header messages 
+								 	
+UVM_INFO @ 0: reporter [RNTST] Running test Kmeans_test...
+0.0 : Kmeans_test_tb.dut.u_k_means_core.RAM_1.ram.Warning : OEB is unknown.
+0.0 : Kmeans_test_tb.dut.u_k_means_core.RAM_2.ram.Warning : OEB is unknown.
+UVM_INFO Kmeans_agent.sv(36) @ 0: uvm_test_top.kmeans_env.kmeans_agent [] Build of Agent finished
+UVM_INFO Kmeans_agent.sv(49) @ 0: uvm_test_top.kmeans_env.kmeans_agent [] Connect Phase of Agent
+UVM_INFO Kmeans_env.sv(29) @ 0: uvm_test_top.kmeans_env [] Connect Phase of kmeans_env
+UVM_INFO Kmeans_driver.sv(278) @ 0: uvm_test_top.kmeans_env.kmeans_agent.kmeans_drvr [] Drive Function of Driver
+UVM_INFO Kmeans_scoreboard.sv(65) @ 0: uvm_test_top.kmeans_env.kmeans_sb [] run method of Kmeans_scoreboard
+UVM_INFO Kmeans_sequencer.sv(95) @ 0: uvm_test_top.kmeans_env.kmeans_agent.kmeans_seqr@@kmeans_seq [KMEANS_IN_SEQUENCE] Starting body of kmeans_seq
+MONITOR, vif print pwrite <x>        100
+MONITOR, vif print pwdata <xxxxxxxxxxxxxxxxxxxxxxx>        100
+0.0 : Kmeans_test_tb.dut.u_k_means_core.RAM_1.ram.Warning : Address is unknown - cannot access memory.
+0.0 : Kmeans_test_tb.dut.u_k_means_core.RAM_2.ram.Warning : Address is unknown - cannot access memory.
+0.0 : Kmeans_test_tb.dut.u_k_means_core.RAM_1.ram.Warning : OEB is unknown.
+0.0 : Kmeans_test_tb.dut.u_k_means_core.RAM_2.ram.Warning : OEB is unknown.
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_1.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_1.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_2.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_2.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_3.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_3.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_4.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_4.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_5.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_5.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_6.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_6.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_7.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_7.DWF_rem_tc: Division by zero
+SEQUENCE, num points is          99        100
+SEQUENCE, centroid           0 is h'31861d36d09111bb6c8ed1a DONE        100
+SEQUENCE, centroid           1 is h'3fecd60cbb34ca0e93dfc5f DONE        100
+SEQUENCE, centroid           2 is h'22c2325438c93f83e6c70cf DONE        100
+SEQUENCE, centroid           3 is h'5b2b5f117b34515e006335f DONE        100
+SEQUENCE, centroid           4 is h'26e94846f9d039496b4237c DONE        100
+SEQUENCE, centroid           5 is h'04651e777c988ebab3aea76 DONE        100
+SEQUENCE, centroid           6 is h'24c72dc5c19056564e60f8b DONE        100
+SEQUENCE, centroid           7 is h'2d89549ddf235fde5ab3343 DONE        100
+UVM_INFO Kmeans_driver.sv(294) @ 0: uvm_test_top.kmeans_env.kmeans_agent.kmeans_drvr [got new kmeans transaction] --------------------------------------------------------------------------------------------------------------------
+Name                           Type                Size  Value                                                      
+--------------------------------------------------------------------------------------------------------------------
+kmeans_tx                      Kmeans_transaction  -     @807                                                       
+  num_points                   integral            32    'h63                                                       
+  begin_time                   time                64    0                                                          
+  depth                        int                 32    'd2                                                        
+  parent sequence (name)       string              10    kmeans_seq                                                 
+  parent sequence (full name)  string              59    uvm_test_top.kmeans_env.kmeans_agent.kmeans_seqr.kmeans_seq
+  sequencer                    string              48    uvm_test_top.kmeans_env.kmeans_agent.kmeans_seqr           
+--------------------------------------------------------------------------------------------------------------------
+
+CENTROID           0 is h'31861d36d09111bb6c8ed1a DONE        100
+DRIVER 2, sanity_check: DUT single_point = 00000000000000000000001        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+CENTROID           1 is h'3fecd60cbb34ca0e93dfc5f DONE        100
+DRIVER 2, sanity_check: DUT single_point = 00000000000000000000002        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000002>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000002>        100
+CENTROID           2 is h'22c2325438c93f83e6c70cf DONE        100
+DRIVER 2, sanity_check: DUT single_point = 00000000000000000000003        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000003>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000003>        100
+CENTROID           3 is h'5b2b5f117b34515e006335f DONE        100
+DRIVER 2, sanity_check: DUT single_point = 00000000000000000000004        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000004>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000004>        100
+CENTROID           4 is h'26e94846f9d039496b4237c DONE        100
+DRIVER 2, sanity_check: DUT single_point = 00000000000000000000005        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000005>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000005>        100
+CENTROID           5 is h'04651e777c988ebab3aea76 DONE        100
+DRIVER 2, sanity_check: DUT single_point = 00000000000000000000006        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000006>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000006>        100
+CENTROID           6 is h'24c72dc5c19056564e60f8b DONE        100
+DRIVER 2, sanity_check: DUT single_point = 00000000000000000000007        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000007>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000007>        100
+CENTROID           7 is h'2d89549ddf235fde5ab3343 DONE        100
+DRIVER 2, sanity_check: DUT single_point = 00000000000000000000008        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000008>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000008>        100
+WRITE CENTROIDS DONE        100
+DRIVER 2, sanity_check: DUT single_point = 00000000000000000000001        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+DRIVER 2, sanity_check: DUT single_point = 0000000000000000000000a        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <0000000000000000000000a>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <0000000000000000000000a>        100
+WRITE_RAM_BOUNDARIES_DONE, num points is <         99>        100
+DRIVER 2, sanity_check: DUT single_point = 00000000000000000000001        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+DRIVER 1, sanity_check: DUT single_point[          1] = 0000000000000000000000b        100
+DRIVER 2, sanity_check: DUT single_point = 0000000000000000000000b        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <0000000000000000000000b>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <0000000000000000000000b>        100
+DRIVER 2, sanity_check: DUT single_point = 00000000000000000000002        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000002>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000002>        100
+DRIVER 1, sanity_check: DUT single_point[          2] = 0000000000000000000000c        100
+DRIVER 2, sanity_check: DUT single_point = 0000000000000000000000c        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <0000000000000000000000c>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <0000000000000000000000c>        100
+DRIVER 2, sanity_check: DUT single_point = 00000000000000000000003        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000003>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000003>        100
+DRIVER 1, sanity_check: DUT single_point[          3] = 0000000000000000000000d        100
+DRIVER 2, sanity_check: DUT single_point = 0000000000000000000000d        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <0000000000000000000000d>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <0000000000000000000000d>        100
+DRIVER 2, sanity_check: DUT single_point = 00000000000000000000004        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000004>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000004>        100
+DRIVER 1, sanity_check: DUT single_point[          4] = 0000000000000000000000e        100
+DRIVER 2, sanity_check: DUT single_point = 0000000000000000000000e        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <0000000000000000000000e>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <0000000000000000000000e>        100
+DRIVER 2, sanity_check: DUT single_point = 00000000000000000000005        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000005>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000005>        100
+DRIVER 1, sanity_check: DUT single_point[          5] = 0000000000000000000000f        100
+DRIVER 2, sanity_check: DUT single_point = 0000000000000000000000f        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <0000000000000000000000f>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <0000000000000000000000f>        100
+DRIVER 2, sanity_check: DUT single_point = 00000000000000000000006        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000006>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000006>        100
+DRIVER 1, sanity_check: DUT single_point[          6] = 00000000000000000000010        100
+DRIVER 2, sanity_check: DUT single_point = 00000000000000000000010        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000010>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000010>        100
+DRIVER 2, sanity_check: DUT single_point = 00000000000000000000007        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000007>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000007>        100
+DRIVER 1, sanity_check: DUT single_point[          7] = 00000000000000000000011        100
+DRIVER 2, sanity_check: DUT single_point = 00000000000000000000011        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000011>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000011>        100
+DRIVER 2, sanity_check: DUT single_point = 00000000000000000000008        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000008>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000008>        100
+DRIVER 1, sanity_check: DUT single_point[          8] = 00000000000000000000012        100
+DRIVER 2, sanity_check: DUT single_point = 00000000000000000000012        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000012>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000012>        100
+DRIVER 2, sanity_check: DUT single_point = 00000000000000000000009        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000009>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000009>        100
+DRIVER 1, sanity_check: DUT single_point[          9] = 0000000000000000000e000        100
+DRIVER 2, sanity_check: DUT single_point = 0000000000000000000e000        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <0000000000000000000e000>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <0000000000000000000e000>        100
+DRIVER 2, sanity_check: DUT single_point = 0000000000000000000000a        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <0000000000000000000000a>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <0000000000000000000000a>        100
+DRIVER 1, sanity_check: DUT single_point[         10] = 57a6ba0f0f89e60487d9188        100
+DRIVER 2, sanity_check: DUT single_point = 57a6ba0f0f89e60487d9188        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <57a6ba0f0f89e60487d9188>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <57a6ba0f0f89e60487d9188>        100
+WRITE_DATA_POINTS_DONE        100
+DRIVER 2, sanity_check: DUT single_point = 00000000000000000000001        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+UVM_INFO Kmeans_driver.sv(112) @ 1830000000: uvm_test_top.kmeans_env.kmeans_agent.kmeans_drvr [got a GO packet to drive] ---------------------------------------
+Name       Type             Size  Value
+---------------------------------------
+apb_tx     APB_transaction  -     @958 
+  address  integral         9     'h1  
+  data     integral         91    'h1  
+  write    integral         1     'h1  
+---------------------------------------
+
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_1.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_1.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_2.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_2.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_3.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_3.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_4.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_4.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_5.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_5.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_6.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_6.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_7.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_7.DWF_rem_tc: Division by zero
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_1.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_1.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_2.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_2.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_3.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_3.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_4.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_4.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_5.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_5.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_6.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_6.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_7.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_7.DWF_rem_tc: Division by zero
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_1.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_1.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_2.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_2.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_3.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_3.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_4.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_4.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_5.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_5.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_6.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_6.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_7.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_7.DWF_rem_tc: Division by zero
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_1.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_1.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_2.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_2.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_3.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_3.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_4.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_4.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_5.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_5.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_6.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_6.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_7.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_7.DWF_rem_tc: Division by zero
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_1.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_1.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_2.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_2.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_3.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_3.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_4.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_4.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_5.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_5.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_6.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_6.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_7.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_7.DWF_rem_tc: Division by zero
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_1.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_1.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_2.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_2.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_3.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_3.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_4.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_4.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_5.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_5.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_6.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_6.DWF_rem_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_7.DWF_div_tc: Division by zero
+WARNING: Kmeans_test_tb.dut.u_k_means_core.u_new_means_calculation_block.parsing_dividing.DIV_7.DWF_rem_tc: Division by zero
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+UVM_INFO Kmeans_driver.sv(114) @ 3750000000: uvm_test_top.kmeans_env.kmeans_agent.kmeans_drvr [got a INTERUP at driver] ---------------------------------------
+Name       Type             Size  Value
+---------------------------------------
+apb_tx     APB_transaction  -     @958 
+  address  integral         9     'h1  
+  data     integral         91    'h1  
+  write    integral         1     'h1  
+---------------------------------------
+
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000001>        100
+GO_AND_INTERUPT_DONE        100
+sequencer read centroid <          1>        100
+DRIVER 2, sanity_check: DUT single_point = 00000000000000000000000        100
+MONITOR, vif print pwrite <1>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <0>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <0>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print paddr  <002>        100
+MONITOR, vif print prdata <0000000000000000000e000>        100
+sequencer read centroid <          2>        100
+DRIVER 2, sanity_check: DUT single_point = 00000000000000000000000        100
+MONITOR, vif print pwrite <0>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <0>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <0>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print paddr  <003>        100
+MONITOR, vif print prdata <00000000000000000000002>        100
+sequencer read centroid <          3>        100
+DRIVER 2, sanity_check: DUT single_point = 00000000000000000000000        100
+MONITOR, vif print pwrite <0>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <0>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <0>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print paddr  <004>        100
+MONITOR, vif print prdata <00000000000000000000003>        100
+sequencer read centroid <          4>        100
+DRIVER 2, sanity_check: DUT single_point = 00000000000000000000000        100
+MONITOR, vif print pwrite <0>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <0>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <0>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print paddr  <005>        100
+MONITOR, vif print prdata <00000000000000000000004>        100
+sequencer read centroid <          5>        100
+DRIVER 2, sanity_check: DUT single_point = 00000000000000000000000        100
+MONITOR, vif print pwrite <0>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <0>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <0>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print paddr  <006>        100
+MONITOR, vif print prdata <00000000000000000000005>        100
+sequencer read centroid <          6>        100
+DRIVER 2, sanity_check: DUT single_point = 00000000000000000000000        100
+MONITOR, vif print pwrite <0>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <0>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <0>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print paddr  <007>        100
+MONITOR, vif print prdata <00000000000000000000006>        100
+sequencer read centroid <          7>        100
+DRIVER 2, sanity_check: DUT single_point = 00000000000000000000000        100
+MONITOR, vif print pwrite <0>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <0>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <0>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print paddr  <008>        100
+MONITOR, vif print prdata <0000000000000000000000e>        100
+sequencer read centroid <          8>        100
+DRIVER 2, sanity_check: DUT single_point = 00000000000000000000000        100
+MONITOR, vif print pwrite <0>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <0>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <0>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print paddr  <009>        100
+MONITOR, vif print prdata <57a6ba0f0f89e60487d9188>        100
+sequencer read centroid <          9>        100
+DRIVER 2, sanity_check: DUT single_point = 00000000000000000000000        100
+MONITOR, vif print pwrite <0>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <0>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <0>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print paddr  <00a>        100
+MONITOR, vif print prdata <0000000000000000000000a>        100
+READ_CENTROIDS_DONE        100
+DRIVER 3, sanity_check: single_point[          1] = 0000000000000000000000b        100
+DRIVER 444, vrefif[          1][          1] = 0000000000000        100
+DRIVER 444, vrefif[          1][          2] = 0000000000000        100
+DRIVER 444, vrefif[          1][          3] = 0000000000000        100
+DRIVER 444, vrefif[          1][          4] = 0000000000000        100
+DRIVER 444, vrefif[          1][          5] = 0000000000000        100
+DRIVER 444, vrefif[          1][          6] = 0000000000000        100
+DRIVER 444, vrefif[          1][          7] = 0000000001011        100
+DRIVER 3, sanity_check: single_point[          2] = 0000000000000000000000c        100
+DRIVER 444, vrefif[          2][          1] = 0000000000000        100
+DRIVER 444, vrefif[          2][          2] = 0000000000000        100
+DRIVER 444, vrefif[          2][          3] = 0000000000000        100
+DRIVER 444, vrefif[          2][          4] = 0000000000000        100
+DRIVER 444, vrefif[          2][          5] = 0000000000000        100
+DRIVER 444, vrefif[          2][          6] = 0000000000000        100
+DRIVER 444, vrefif[          2][          7] = 0000000001100        100
+DRIVER 3, sanity_check: single_point[          3] = 0000000000000000000000d        100
+DRIVER 444, vrefif[          3][          1] = 0000000000000        100
+DRIVER 444, vrefif[          3][          2] = 0000000000000        100
+DRIVER 444, vrefif[          3][          3] = 0000000000000        100
+DRIVER 444, vrefif[          3][          4] = 0000000000000        100
+DRIVER 444, vrefif[          3][          5] = 0000000000000        100
+DRIVER 444, vrefif[          3][          6] = 0000000000000        100
+DRIVER 444, vrefif[          3][          7] = 0000000001101        100
+DRIVER 3, sanity_check: single_point[          4] = 0000000000000000000000e        100
+DRIVER 444, vrefif[          4][          1] = 0000000000000        100
+DRIVER 444, vrefif[          4][          2] = 0000000000000        100
+DRIVER 444, vrefif[          4][          3] = 0000000000000        100
+DRIVER 444, vrefif[          4][          4] = 0000000000000        100
+DRIVER 444, vrefif[          4][          5] = 0000000000000        100
+DRIVER 444, vrefif[          4][          6] = 0000000000000        100
+DRIVER 444, vrefif[          4][          7] = 0000000001110        100
+DRIVER 3, sanity_check: single_point[          5] = 0000000000000000000000f        100
+DRIVER 444, vrefif[          5][          1] = 0000000000000        100
+DRIVER 444, vrefif[          5][          2] = 0000000000000        100
+DRIVER 444, vrefif[          5][          3] = 0000000000000        100
+DRIVER 444, vrefif[          5][          4] = 0000000000000        100
+DRIVER 444, vrefif[          5][          5] = 0000000000000        100
+DRIVER 444, vrefif[          5][          6] = 0000000000000        100
+DRIVER 444, vrefif[          5][          7] = 0000000001111        100
+DRIVER 3, sanity_check: single_point[          6] = 00000000000000000000010        100
+DRIVER 444, vrefif[          6][          1] = 0000000000000        100
+DRIVER 444, vrefif[          6][          2] = 0000000000000        100
+DRIVER 444, vrefif[          6][          3] = 0000000000000        100
+DRIVER 444, vrefif[          6][          4] = 0000000000000        100
+DRIVER 444, vrefif[          6][          5] = 0000000000000        100
+DRIVER 444, vrefif[          6][          6] = 0000000000000        100
+DRIVER 444, vrefif[          6][          7] = 0000000010000        100
+DRIVER 3, sanity_check: single_point[          7] = 00000000000000000000011        100
+DRIVER 444, vrefif[          7][          1] = 0000000000000        100
+DRIVER 444, vrefif[          7][          2] = 0000000000000        100
+DRIVER 444, vrefif[          7][          3] = 0000000000000        100
+DRIVER 444, vrefif[          7][          4] = 0000000000000        100
+DRIVER 444, vrefif[          7][          5] = 0000000000000        100
+DRIVER 444, vrefif[          7][          6] = 0000000000000        100
+DRIVER 444, vrefif[          7][          7] = 0000000010001        100
+DRIVER 3, sanity_check: single_point[          8] = 00000000000000000000012        100
+DRIVER 444, vrefif[          8][          1] = 0000000000000        100
+DRIVER 444, vrefif[          8][          2] = 0000000000000        100
+DRIVER 444, vrefif[          8][          3] = 0000000000000        100
+DRIVER 444, vrefif[          8][          4] = 0000000000000        100
+DRIVER 444, vrefif[          8][          5] = 0000000000000        100
+DRIVER 444, vrefif[          8][          6] = 0000000000000        100
+DRIVER 444, vrefif[          8][          7] = 0000000010010        100
+DRIVER 3, sanity_check: single_point[          9] = 0000000000000000000e000        100
+DRIVER 444, vrefif[          9][          1] = 0000000000000        100
+DRIVER 444, vrefif[          9][          2] = 0000000000000        100
+DRIVER 444, vrefif[          9][          3] = 0000000000000        100
+DRIVER 444, vrefif[          9][          4] = 0000000000000        100
+DRIVER 444, vrefif[          9][          5] = 0000000000000        100
+DRIVER 444, vrefif[          9][          6] = 0000000000111        100
+DRIVER 444, vrefif[          9][          7] = 0000000000000        100
+DRIVER 3, sanity_check: single_point[         10] = 57a6ba0f0f89e60487d9188        100
+DRIVER 444, vrefif[         10][          1] = 1010111101001        100
+DRIVER 444, vrefif[         10][          2] = 1010111010000        100
+DRIVER 444, vrefif[         10][          3] = 0111100001111        100
+DRIVER 444, vrefif[         10][          4] = 1000100111100        100
+DRIVER 444, vrefif[         10][          5] = 1100000010010        100
+DRIVER 444, vrefif[         10][          6] = 0001111101100        100
+DRIVER 444, vrefif[         10][          7] = 1000110001000        100
+DRIVER, ref input: centroid <          1> = 00000000000000000000001        100
+DRIVER, ref input: centroid <          2> = 00000000000000000000002        100
+DRIVER, ref input: centroid <          3> = 00000000000000000000003        100
+DRIVER, ref input: centroid <          4> = 00000000000000000000004        100
+DRIVER, ref input: centroid <          5> = 00000000000000000000005        100
+DRIVER, ref input: centroid <          6> = 00000000000000000000006        100
+DRIVER, ref input: centroid <          7> = 00000000000000000000007        100
+DRIVER, ref input: centroid <          8> = 00000000000000000000008        100
+MONITOR, vif print pwrite <0>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+MONITOR, vif print pwrite <0>        100
+MONITOR, vif print pwdata <00000000000000000000000>        100
+aaaa montior: single_point[          1] = 57a6ba0f0f89e60487d9188        100
+aaaa montior: single_point[          2] = 00000000000000000000002        100
+aaaa montior: single_point[          3] = 00000000000000000000003        100
+aaaa montior: single_point[          4] = 00000000000000000000004        100
+aaaa montior: single_point[          5] = 00000000000000000000005        100
+aaaa montior: single_point[          6] = 00000000000000000000006        100
+aaaa montior: single_point[          7] = 00000000000000000000007        100
+aaaa montior: single_point[          8] = 0000000000000000000000e        100
+scoreboard, DUT centroids print        100
+CENT TX PRINT:        100
+CENT           1 PRINT: 0000000000000000000e000        100
+cordinate [          1]: 0000        100
+cordinate [          2]: 0000        100
+cordinate [          3]: 0000        100
+cordinate [          4]: 0000        100
+cordinate [          5]: 0000        100
+cordinate [          6]: 0007        100
+cordinate [          7]: 0000        100
+CENT           2 PRINT: 00000000000000000000002        100
+cordinate [          1]: 0000        100
+cordinate [          2]: 0000        100
+cordinate [          3]: 0000        100
+cordinate [          4]: 0000        100
+cordinate [          5]: 0000        100
+cordinate [          6]: 0000        100
+cordinate [          7]: 0002        100
+CENT           3 PRINT: 00000000000000000000003        100
+cordinate [          1]: 0000        100
+cordinate [          2]: 0000        100
+cordinate [          3]: 0000        100
+cordinate [          4]: 0000        100
+cordinate [          5]: 0000        100
+cordinate [          6]: 0000        100
+cordinate [          7]: 0003        100
+CENT           4 PRINT: 00000000000000000000004        100
+cordinate [          1]: 0000        100
+cordinate [          2]: 0000        100
+cordinate [          3]: 0000        100
+cordinate [          4]: 0000        100
+cordinate [          5]: 0000        100
+cordinate [          6]: 0000        100
+cordinate [          7]: 0004        100
+CENT           5 PRINT: 00000000000000000000005        100
+cordinate [          1]: 0000        100
+cordinate [          2]: 0000        100
+cordinate [          3]: 0000        100
+cordinate [          4]: 0000        100
+cordinate [          5]: 0000        100
+cordinate [          6]: 0000        100
+cordinate [          7]: 0005        100
+CENT           6 PRINT: 00000000000000000000006        100
+cordinate [          1]: 0000        100
+cordinate [          2]: 0000        100
+cordinate [          3]: 0000        100
+cordinate [          4]: 0000        100
+cordinate [          5]: 0000        100
+cordinate [          6]: 0000        100
+cordinate [          7]: 0006        100
+CENT           7 PRINT: 0000000000000000000000e        100
+cordinate [          1]: 0000        100
+cordinate [          2]: 0000        100
+cordinate [          3]: 0000        100
+cordinate [          4]: 0000        100
+cordinate [          5]: 0000        100
+cordinate [          6]: 0000        100
+cordinate [          7]: 000e        100
+CENT           8 PRINT: 57a6ba0f0f89e60487d9188        100
+cordinate [          1]: 15e9        100
+cordinate [          2]: 15d0        100
+cordinate [          3]: 0f0f        100
+cordinate [          4]: 113c        100
+cordinate [          5]: 1812        100
+cordinate [          6]: 03ec        100
+cordinate [          7]: 1188        100
+scoreboard, REFMODEL centroids print        100
+CENT TX PRINT:        100
+CENT           1 PRINT: 57a6ba0f0f89e60487d9188        100
+cordinate [          1]: 15e9        100
+cordinate [          2]: 15d0        100
+cordinate [          3]: 0f0f        100
+cordinate [          4]: 113c        100
+cordinate [          5]: 1812        100
+cordinate [          6]: 03ec        100
+cordinate [          7]: 1188        100
+CENT           2 PRINT: 00000000000000000000002        100
+cordinate [          1]: 0000        100
+cordinate [          2]: 0000        100
+cordinate [          3]: 0000        100
+cordinate [          4]: 0000        100
+cordinate [          5]: 0000        100
+cordinate [          6]: 0000        100
+cordinate [          7]: 0002        100
+CENT           3 PRINT: 00000000000000000000003        100
+cordinate [          1]: 0000        100
+cordinate [          2]: 0000        100
+cordinate [          3]: 0000        100
+cordinate [          4]: 0000        100
+cordinate [          5]: 0000        100
+cordinate [          6]: 0000        100
+cordinate [          7]: 0003        100
+CENT           4 PRINT: 00000000000000000000004        100
+cordinate [          1]: 0000        100
+cordinate [          2]: 0000        100
+cordinate [          3]: 0000        100
+cordinate [          4]: 0000        100
+cordinate [          5]: 0000        100
+cordinate [          6]: 0000        100
+cordinate [          7]: 0004        100
+CENT           5 PRINT: 00000000000000000000005        100
+cordinate [          1]: 0000        100
+cordinate [          2]: 0000        100
+cordinate [          3]: 0000        100
+cordinate [          4]: 0000        100
+cordinate [          5]: 0000        100
+cordinate [          6]: 0000        100
+cordinate [          7]: 0005        100
+CENT           6 PRINT: 00000000000000000000006        100
+cordinate [          1]: 0000        100
+cordinate [          2]: 0000        100
+cordinate [          3]: 0000        100
+cordinate [          4]: 0000        100
+cordinate [          5]: 0000        100
+cordinate [          6]: 0000        100
+cordinate [          7]: 0006        100
+CENT           7 PRINT: 00000000000000000000007        100
+cordinate [          1]: 0000        100
+cordinate [          2]: 0000        100
+cordinate [          3]: 0000        100
+cordinate [          4]: 0000        100
+cordinate [          5]: 0000        100
+cordinate [          6]: 0000        100
+cordinate [          7]: 0007        100
+CENT           8 PRINT: 0000000000000000000000e        100
+cordinate [          1]: 0000        100
+cordinate [          2]: 0000        100
+cordinate [          3]: 0000        100
+cordinate [          4]: 0000        100
+cordinate [          5]: 0000        100
+cordinate [          6]: 0000        100
+cordinate [          7]: 000e        100
+UVM_INFO /tools/synopsys78/FEV/vcs_mx_vN-2017.12-1/etc/uvm-1.2/src/base/uvm_objection.svh(1276) @ 4350000000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO /tools/synopsys78/FEV/vcs_mx_vN-2017.12-1/etc/uvm-1.2/src/base/uvm_report_server.svh(894) @ 4350000000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   12
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[]     5
+[KMEANS_IN_SEQUENCE]     1
+[RNTST]     1
+[TEST_DONE]     1
+[UVM/RELNOTES]     1
+[got a GO packet to drive]     1
+[got a INTERUP at driver]     1
+[got new kmeans transaction]     1
+
+$finish called from file "/tools/synopsys78/FEV/vcs_mx_vN-2017.12-1/etc/uvm-1.2/src/base/uvm_root.svh", line 527.
+$finish at simulation time           4350000000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 4350000000 fs
+CPU Time:      0.530 seconds;       Data structure size:   0.8Mb
+Sat Sep 26 15:55:22 2020
