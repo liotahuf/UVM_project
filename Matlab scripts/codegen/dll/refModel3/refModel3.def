@@ -1,0 +1,4 @@
+EXPORTS
+refModel3_initialize
+refModel3_terminate
+refModel3
