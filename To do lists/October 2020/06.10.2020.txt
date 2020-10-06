@@ -1,0 +1,9 @@
+Last week taks:
+Fix Matlab ref model to run similarly to DUT - Done
+Fix DUT in order to make two's complement addition of two differnt size types correctly- Done
+Re ru  sanity check and verify corrected after the bugs in DUT and Ref MOdel done - Done
+
+New Tasks
+Continue writting project report - Liora
+Cotinue step by step sanity check test in UVM enviroment( now that one point is randon, run it with two random points and so on until 10 points are random) - Edi
+
