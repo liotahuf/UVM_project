@@ -24,7 +24,7 @@ currentCent = finalCent
 iterations = 0
 while(converged == 0)
     iterations =iterations+1
-    acummulators = fi(zeros(8,7),1,13,10);
+    acummulators = fi(zeros(8,7),1,22,10);
     %acummulators.RoundingMethod = 'Floor'
     acummuCnts = zeros(8,1);
     currentCent = finalCent
