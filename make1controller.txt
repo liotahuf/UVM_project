@@ -1,0 +1,90 @@
+SCOREBARD, sum cordinate diff for centroid[          1] =           2, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          2] =           4, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          3] =           5, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          4] =           3, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          5] =           2, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          6] =           4, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          7] =           4, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          8] =           0, avg cordiff =           0        100
+SCOREBOARD, total diff =          24, avg diff(in thousandth) =           3:        100
+SCOREBARD, sum cordinate diff for centroid[          1] =           7, avg cordiff =           1        100
+SCOREBARD, sum cordinate diff for centroid[          2] =           2, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          3] =           4, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          4] =           4, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          5] =           4, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          6] =           5, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          7] =           5, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          8] =           0, avg cordiff =           0        100
+SCOREBOARD, total diff =          31, avg diff(in thousandth) =           3:        100
+SCOREBARD, sum cordinate diff for centroid[          1] =           2, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          2] =           3, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          3] =           0, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          4] =           3, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          5] =           5, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          6] =       13251, avg cordiff =        1893        100
+SCOREBARD, sum cordinate diff for centroid[          7] =           0, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          8] =           0, avg cordiff =           0        100
+SCOREBOARD, total diff =       13264, avg diff(in thousandth) =        1658:        100
+SCOREBARD, sum cordinate diff for centroid[          1] =           3, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          2] =           5, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          3] =           3, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          4] =           3, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          5] =           4, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          6] =           3, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          7] =           2, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          8] =           0, avg cordiff =           0        100
+SCOREBOARD, total diff =          23, avg diff(in thousandth) =           2:        100
+SCOREBARD, sum cordinate diff for centroid[          1] =        6026, avg cordiff =         860        100
+SCOREBARD, sum cordinate diff for centroid[          2] =        3798, avg cordiff =         542        100
+SCOREBARD, sum cordinate diff for centroid[          3] =        1851, avg cordiff =         264        100
+SCOREBARD, sum cordinate diff for centroid[          4] =        4619, avg cordiff =         659        100
+SCOREBARD, sum cordinate diff for centroid[          5] =        6282, avg cordiff =         897        100
+SCOREBARD, sum cordinate diff for centroid[          6] =        5558, avg cordiff =         794        100
+SCOREBARD, sum cordinate diff for centroid[          7] =        3802, avg cordiff =         543        100
+SCOREBARD, sum cordinate diff for centroid[          8] =           0, avg cordiff =           0        100
+SCOREBOARD, total diff =       31936, avg diff(in thousandth) =        3992:        100
+SCOREBARD, sum cordinate diff for centroid[          1] =        2650, avg cordiff =         378        100
+SCOREBARD, sum cordinate diff for centroid[          2] =        5569, avg cordiff =         795        100
+SCOREBARD, sum cordinate diff for centroid[          3] =        1117, avg cordiff =         159        100
+SCOREBARD, sum cordinate diff for centroid[          4] =        4691, avg cordiff =         670        100
+SCOREBARD, sum cordinate diff for centroid[          5] =        5562, avg cordiff =         794        100
+SCOREBARD, sum cordinate diff for centroid[          6] =        1817, avg cordiff =         259        100
+SCOREBARD, sum cordinate diff for centroid[          7] =        2503, avg cordiff =         357        100
+SCOREBARD, sum cordinate diff for centroid[          8] =           0, avg cordiff =           0        100
+SCOREBOARD, total diff =       23909, avg diff(in thousandth) =        2988:        100
+SCOREBARD, sum cordinate diff for centroid[          1] =         793, avg cordiff =         113        100
+SCOREBARD, sum cordinate diff for centroid[          2] =        1301, avg cordiff =         185        100
+SCOREBARD, sum cordinate diff for centroid[          3] =         619, avg cordiff =          88        100
+SCOREBARD, sum cordinate diff for centroid[          4] =        3117, avg cordiff =         445        100
+SCOREBARD, sum cordinate diff for centroid[          5] =           2, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          6] =        1491, avg cordiff =         213        100
+SCOREBARD, sum cordinate diff for centroid[          7] =        1762, avg cordiff =         251        100
+SCOREBARD, sum cordinate diff for centroid[          8] =           0, avg cordiff =           0        100
+SCOREBOARD, total diff =        9085, avg diff(in thousandth) =        1135:        100
+SCOREBARD, sum cordinate diff for centroid[          1] =        2079, avg cordiff =         297        100
+SCOREBARD, sum cordinate diff for centroid[          2] =           6, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          3] =        3069, avg cordiff =         438        100
+SCOREBARD, sum cordinate diff for centroid[          4] =        2745, avg cordiff =         392        100
+SCOREBARD, sum cordinate diff for centroid[          5] =        1265, avg cordiff =         180        100
+SCOREBARD, sum cordinate diff for centroid[          6] =        4556, avg cordiff =         650        100
+SCOREBARD, sum cordinate diff for centroid[          7] =           4, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          8] =           0, avg cordiff =           0        100
+SCOREBOARD, total diff =       13724, avg diff(in thousandth) =        1715:        100
+SCOREBARD, sum cordinate diff for centroid[          1] =           1, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          2] =           4, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          3] =           6, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          4] =           4, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          5] =           4, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          6] =        4860, avg cordiff =         694        100
+SCOREBARD, sum cordinate diff for centroid[          7] =        4526, avg cordiff =         646        100
+SCOREBARD, sum cordinate diff for centroid[          8] =           0, avg cordiff =           0        100
+SCOREBOARD, total diff =        9405, avg diff(in thousandth) =        1175:        100
+SCOREBARD, sum cordinate diff for centroid[          1] =           3, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          2] =           2, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          3] =           3, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          4] =         502, avg cordiff =          71        100
+SCOREBARD, sum cordinate diff for centroid[          5] =           3, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          6] =         596, avg cordiff =          85        100
+SCOREBARD, sum cordinate diff for centroid[          7] =           4, avg cordiff =           0        100
+SCOREBARD, sum cordinate diff for centroid[          8] =           0, avg cordiff =           0        100
+SCOREBOARD, total diff =        1113, avg diff(in thousandth) =         139:        100
