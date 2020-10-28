@@ -15,6 +15,7 @@ finalCent = inputCent
 pointMatrix = inputMatrix(firstPointRow:lastPointRow,:);
 
 numRows =  lastPointRow- firstPointRow +1 
+threshold = double(inputThreshold)
 %initialCent = double(inputCent);
 
 %% do k means
@@ -24,6 +25,9 @@ currentCent = finalCent
 iterations = 0
 while(converged == 0)
     iterations =iterations+1
+    if(iterations>10e100000)
+        break
+    end
     acummulators = fi(zeros(8,7),1,22,10);
     %acummulators.RoundingMethod = 'Floor'
     acummuCnts = zeros(8,1);
