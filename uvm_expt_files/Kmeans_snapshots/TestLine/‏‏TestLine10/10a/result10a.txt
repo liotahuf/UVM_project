@@ -1,0 +1,90 @@
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+SCOREBOARD, num fails =           0, fail percentage = 0.000000        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+SCOREBOARD, num fails =           1, fail percentage = 0.500000        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+SCOREBOARD, num fails =           1, fail percentage = 0.333333        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+SCOREBOARD, num fails =           2, fail percentage = 0.500000        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+SCOREBOARD, num fails =           3, fail percentage = 0.600000        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+SCOREBOARD, num fails =           3, fail percentage = 0.500000        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+SCOREBOARD, num fails =           4, fail percentage = 0.571429        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+SCOREBOARD, num fails =           5, fail percentage = 0.625000        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+SCOREBOARD, num fails =           5, fail percentage = 0.555556        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+MONITOR, num fails 10a =           0        100
+SCOREBOARD, num fails =           6, fail percentage = 0.600000        100
