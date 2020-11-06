@@ -1,0 +1,10 @@
+SCOREBOARD, num fails =           0, fail percentage = 0.000000        100
+SCOREBOARD, num fails =           1, fail percentage = 0.500000        100
+SCOREBOARD, num fails =           1, fail percentage = 0.333333        100
+SCOREBOARD, num fails =           1, fail percentage = 0.250000        100
+SCOREBOARD, num fails =           2, fail percentage = 0.400000        100
+SCOREBOARD, num fails =           2, fail percentage = 0.333333        100
+SCOREBOARD, num fails =           3, fail percentage = 0.428571        100
+SCOREBOARD, num fails =           3, fail percentage = 0.375000        100
+SCOREBOARD, num fails =           3, fail percentage = 0.333333        100
+SCOREBOARD, num fails =           3, fail percentage = 0.300000        100
