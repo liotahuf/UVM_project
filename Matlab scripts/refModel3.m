@@ -30,7 +30,7 @@ while(converged == 0)
     end
     acummulators = fi(zeros(8,7),1,22,10);
     %acummulators.RoundingMethod = 'Floor'
-    acummuCnts = zeros(8,1);
+    acummuCnts = fi(zeros(8,1),0,9,0);
     currentCent = finalCent
     %currentCent.RoundingMethod = 'Floor'
     %calculate distance and add to acumulator 
@@ -48,10 +48,11 @@ while(converged == 0)
     convegrnceCnt =0
     for i=1:8
         if(acummuCnts(i)>0)
-            currAcummDouble = round(double(acummulators(i,:)*1000))/1000;
-            currCentDouble = currAcummDouble/acummuCnts(i);
-            currentCent(i,:) = fi(currCentDouble,1,13,10,'RoundingMethod','Floor')
+            %currAcummDouble = round(double(acummulators(i,:)*1000))/1000;
+            %currCentDouble = currAcummDouble/acummuCnts(i);
+            %currentCent(i,:) = fi(currCentDouble,1,13,10,'RoundingMethod','Floor')
             %currentCent(i,:) = (floor(currentCent(i,:).*1000))/1000;
+            currentCent(i,:) = acummulators(i,:)/acummuCnts(i);
             if(sum(abs(currentCent(i,:) - finalCent(i,:)),2) <= inputThreshold)
                 convegrnceCnt=convegrnceCnt+1
             end    

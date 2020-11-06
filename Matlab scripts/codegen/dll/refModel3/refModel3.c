@@ -11,29 +11,61 @@
 
 /* Include files */
 #include "refModel3.h"
-#include <math.h>
 #include <string.h>
 
 /* Function Declarations */
-static double rt_roundd_snf(double u);
+static int div_s22s32_near(int numerator, int denominator);
 
 /* Function Definitions */
-static double rt_roundd_snf(double u)
+static int div_s22s32_near(int numerator, int denominator)
 {
-  double y;
-  if (fabs(u) < 4.503599627370496E+15) {
-    if (u >= 0.5) {
-      y = floor(u + 0.5);
-    } else if (u > -0.5) {
-      y = u * 0.0;
+  int quotient;
+  unsigned int absNumerator;
+  unsigned int absDenominator;
+  boolean_T quotientNeedsNegation;
+  unsigned int tempAbsQuotient;
+  if (denominator == 0) {
+    if (numerator >= 0) {
+      quotient = 2097151;
     } else {
-      y = ceil(u - 0.5);
+      quotient = -2097152;
     }
   } else {
-    y = u;
+    if (numerator < 0) {
+      absNumerator = ~(unsigned int)numerator + 1U;
+    } else {
+      absNumerator = (unsigned int)numerator;
+    }
+
+    if (denominator < 0) {
+      absDenominator = ~(unsigned int)denominator + 1U;
+    } else {
+      absDenominator = (unsigned int)denominator;
+    }
+
+    quotientNeedsNegation = ((numerator < 0) != (denominator < 0));
+    tempAbsQuotient = absNumerator / absDenominator;
+    absNumerator %= absDenominator;
+    absNumerator <<= 1U;
+    if ((absNumerator >= absDenominator) && ((!quotientNeedsNegation) ||
+         (absNumerator > absDenominator))) {
+      tempAbsQuotient++;
+    }
+
+    if (quotientNeedsNegation) {
+      quotient = -(int)tempAbsQuotient;
+    } else {
+      quotient = (int)tempAbsQuotient;
+    }
+
+    if ((quotient & 2097152) != 0) {
+      quotient |= -2097152;
+    } else {
+      quotient &= 2097151;
+    }
   }
 
-  return y;
+  return quotient;
 }
 
 void refModel3(const short inputMatrix[3584], const short inputCent[56], short
@@ -43,21 +75,22 @@ void refModel3(const short inputMatrix[3584], const short inputCent[56], short
   int i;
   int numRows;
   int converged;
-  short acummulators[56];
-  double acummuCnts[8];
-  short currentCent[56];
+  int acummulators[56];
   int b_i;
-  int j;
+  short currentCent[56];
+  unsigned short acummuCnts[8];
+  int c_i;
   double convegrnceCnt;
   double distances[8];
   int k;
+  int iidx;
+  unsigned short b;
   short X[7];
   short i1;
   int Y;
   short i2;
   int i3;
   double d;
-  int i4;
   int b_acummulators;
 
   /* Summary of this function goes here */
@@ -84,18 +117,21 @@ void refModel3(const short inputMatrix[3584], const short inputCent[56], short
 
   /* currentCent.RoundingMethod = 'Floor' */
   while (converged == 0) {
-    memset(&acummulators[0], 0, 56U * sizeof(short));
+    memset(&acummulators[0], 0, 56U * sizeof(int));
 
     /* acummulators.RoundingMethod = 'Floor' */
-    memset(&acummuCnts[0], 0, 8U * sizeof(double));
+    for (b_i = 0; b_i < 8; b_i++) {
+      acummuCnts[b_i] = 0U;
+    }
+
     memcpy(&currentCent[0], &finalCent[0], 56U * sizeof(short));
 
     /* currentCent.RoundingMethod = 'Floor' */
     /* calculate distance and add to acumulator  */
     for (b_i = 0; b_i <= numRows; b_i++) {
-      for (j = 0; j < 8; j++) {
+      for (c_i = 0; c_i < 8; c_i++) {
         for (k = 0; k < 7; k++) {
-          i1 = finalCent[k + 7 * j];
+          i1 = finalCent[k + 7 * c_i];
           i2 = inputMatrix[k + 7 * (i + b_i)];
           if ((i1 & 8192) != 0) {
             i3 = i1 | -8192;
@@ -104,12 +140,12 @@ void refModel3(const short inputMatrix[3584], const short inputCent[56], short
           }
 
           if ((i2 & 8192) != 0) {
-            i4 = i2 | -8192;
+            b_acummulators = i2 | -8192;
           } else {
-            i4 = i2 & 8191;
+            b_acummulators = i2 & 8191;
           }
 
-          i1 = (short)(i3 - i4);
+          i1 = (short)(i3 - b_acummulators);
           if ((i1 & 8192) != 0) {
             i1 = (short)(i1 | -8192);
           } else {
@@ -152,97 +188,110 @@ void refModel3(const short inputMatrix[3584], const short inputCent[56], short
           }
         }
 
-        distances[j] = (double)Y * 0.0009765625;
+        distances[c_i] = (double)Y * 0.0009765625;
       }
 
       convegrnceCnt = distances[0];
-      j = 0;
+      iidx = 0;
       for (k = 2; k < 9; k++) {
         d = distances[k - 1];
         if (convegrnceCnt > d) {
           convegrnceCnt = d;
-          j = k - 1;
+          iidx = k - 1;
         }
       }
 
       for (i3 = 0; i3 < 7; i3++) {
-        Y = i3 + 7 * j;
-        i1 = inputMatrix[i3 + 7 * (i + b_i)];
-        if ((acummulators[Y] & 8192) != 0) {
-          b_acummulators = acummulators[Y] | -8192;
+        c_i = i3 + 7 * iidx;
+        Y = inputMatrix[i3 + 7 * (i + b_i)];
+        if ((acummulators[c_i] & 4194304) != 0) {
+          b_acummulators = acummulators[c_i] | -4194304;
         } else {
-          b_acummulators = acummulators[Y] & 8191;
+          b_acummulators = acummulators[c_i] & 4194303;
         }
 
-        if ((i1 & 8192) != 0) {
-          i4 = i1 | -8192;
+        if ((Y & 4194304) != 0) {
+          Y |= -4194304;
         } else {
-          i4 = i1 & 8191;
+          Y &= 4194303;
         }
 
-        i1 = (short)(b_acummulators + i4);
-        if ((i1 & 8192) != 0) {
-          i1 = (short)(i1 | -8192);
+        Y += b_acummulators;
+        if ((Y & 4194304) != 0) {
+          Y |= -4194304;
         } else {
-          i1 = (short)(i1 & 8191);
+          Y &= 4194303;
         }
 
-        if (i1 > 4095) {
-          i1 = 4095;
+        if (Y > 2097151) {
+          Y = 2097151;
         } else {
-          if (i1 < -4096) {
-            i1 = -4096;
+          if (Y < -2097152) {
+            Y = -2097152;
           }
         }
 
-        acummulators[Y] = i1;
+        acummulators[c_i] = Y;
       }
 
-      acummuCnts[j]++;
+      b = (unsigned short)(acummuCnts[iidx] + 1U);
+      if (b > 511) {
+        b = 511U;
+      }
+
+      acummuCnts[iidx] = b;
     }
 
     /* calculate new centroids and check convergence */
     convegrnceCnt = 0.0;
     for (b_i = 0; b_i < 8; b_i++) {
-      if (acummuCnts[b_i] > 0.0) {
+      b = acummuCnts[b_i];
+      if (acummuCnts[b_i] > 0) {
+        /* currAcummDouble = round(double(acummulators(i,:)*1000))/1000; */
+        /* currCentDouble = currAcummDouble/acummuCnts(i); */
+        /* currentCent(i,:) = fi(currCentDouble,1,13,10,'RoundingMethod','Floor') */
         /* currentCent(i,:) = (floor(currentCent(i,:).*1000))/1000; */
-        for (k = 0; k < 7; k++) {
-          i3 = k + 7 * b_i;
-          Y = acummulators[i3] * 4000;
-          if ((Y & 33554432) != 0) {
-            Y |= -33554432;
+        for (Y = 0; Y < 7; Y++) {
+          if (7 > Y + 1) {
+            c_i = Y;
           } else {
-            Y &= 33554431;
+            c_i = 6;
           }
 
-          d = floor(rt_roundd_snf((double)Y * 0.000244140625) / 1000.0 /
-                    acummuCnts[b_i] * 1024.0);
-          if (d < 4096.0) {
-            if (d >= -4096.0) {
-              i1 = (short)d;
+          if (b == 0) {
+            if (acummulators[c_i + 7 * b_i] < 0) {
+              i3 = -2097152;
             } else {
-              i1 = -4096;
+              i3 = 2097151;
             }
-          } else if (d >= 4096.0) {
-            i1 = 4095;
           } else {
-            i1 = 0;
+            i3 = div_s22s32_near(acummulators[c_i + 7 * b_i], b);
           }
 
-          currentCent[i3] = i1;
+          if (i3 > 4095) {
+            i3 = 4095;
+          } else {
+            if (i3 < -4096) {
+              i3 = -4096;
+            }
+          }
+
+          i1 = (short)i3;
+          c_i = Y + 7 * b_i;
+          currentCent[c_i] = i1;
           if ((i1 & 8192) != 0) {
-            i4 = i1 | -8192;
+            i3 = i1 | -8192;
           } else {
-            i4 = i1 & 8191;
+            i3 = i1 & 8191;
           }
 
-          if ((finalCent[i3] & 8192) != 0) {
-            b_acummulators = finalCent[i3] | -8192;
+          if ((finalCent[c_i] & 8192) != 0) {
+            b_acummulators = finalCent[c_i] | -8192;
           } else {
-            b_acummulators = finalCent[i3] & 8191;
+            b_acummulators = finalCent[c_i] & 8191;
           }
 
-          i1 = (short)(i4 - b_acummulators);
+          i1 = (short)(i3 - b_acummulators);
           if ((i1 & 8192) != 0) {
             i1 = (short)(i1 | -8192);
           } else {
@@ -255,9 +304,9 @@ void refModel3(const short inputMatrix[3584], const short inputCent[56], short
           }
 
           if (i1 < 0) {
-            X[k] = (short)i3;
+            X[Y] = (short)i3;
           } else {
-            X[k] = i1;
+            X[Y] = i1;
           }
         }
 
