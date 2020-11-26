@@ -8,11 +8,13 @@ VCS = vcs -sverilog -full64 -timescale=1ns/1ns \
 	+define+UVM_OBJECT_MUST_HAVE_CONSTRUCTOR \
 	+incdir+$(UVM_HOME)/src $(UVM_HOME)/src/uvm.sv \
 	+incdir+/users/epedlh/UVM_Project/Matlab/codegen/dll/refModel3 \
+	-cm_cond allops+anywidth+event -cm_noconst\
 	-cm line+cond+fsm+branch+tgl -cm_dir ./coverage.vdb \
 	$(UVM_HOME)/src/dpi/uvm_dpi.cc -CFLAGS -DVCS -debug -debug_all
 		
 SIMV = ./simv +UVM_VERBOSITY=$(UVM_VERBOSITY) \
 	+UVM_TESTNAME=$(TEST) +UVM_TR_RECORD +UVM_LOG_RECORD \
+	-cm line+cond+fsm  \
 	+verbose=1 +ntb_random_seed=2221  -l vcs.log
 	
 x: comp run

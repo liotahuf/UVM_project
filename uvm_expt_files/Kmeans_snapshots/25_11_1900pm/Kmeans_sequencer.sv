@@ -77,7 +77,6 @@ class Kmeans_transaction extends uvm_sequence_item;
 	rand int num_points;
 	int min_num_points = 8;
 	int max_num_points = 512;
-	rand logic [4] range;
 	
 	//max_points = 512;
 	rand logic [512][91] data_points;
@@ -103,16 +102,10 @@ class Kmeans_transaction extends uvm_sequence_item;
 	constraint RamBoundaries_High {
 		last_point_index == num_points + first_point_index - 13'b1;
 	}
-	
-	constraint rng {
-		range >= 4'd7;
-		//TODO: return range up to 11
-		range <= 4'd11;//11;
-	}
+
 	//data/constraints for Test Line
-	constraint TestLine4 {
-		threshold == 13'b1;
-		num_points >= range*30;//50;
+	constraint TestLine9 {
+		threshold == 13'b1;	
 	}
 	
 	function new(string name = "");
@@ -140,7 +133,7 @@ class Kmeans_in_sequence extends uvm_sequence#(Kmeans_transaction);
 	endfunction: new
 	
 	Kmeans_transaction kmeans_tx;
-	int num_txs = 100;
+	int num_txs = 10000;
 	int j,i,m;
 	int num_centroids = 8;
 	
@@ -155,16 +148,14 @@ class Kmeans_in_sequence extends uvm_sequence#(Kmeans_transaction);
 				`uvm_error("USER_DEFINED_FLAG", "This is a randomize error");
 			end
 			
-			//Test Line changes: begin
-			//kmeans_tx.num_points += 50*j;
-			//kmeans_tx.last_point_index += 50*j;
-			//Test Line changes: end
+			//Test Line 9 changes: begin	
+			//Test Line 9 changes: end
 			
 			
 			start_item(kmeans_tx);
 			
-			$display("SEQUENCE, num points is %d, firstRam idx %d, lastRam idx %d, threshold %b,range %d ",kmeans_tx.num_points,
-					kmeans_tx.first_point_index, kmeans_tx.last_point_index, kmeans_tx.threshold,kmeans_tx.range ,UVM_LOW);
+			$display("SEQUENCE, num points is %d, firstRam idx %d, lastRam idx %d, threshold %b",kmeans_tx.num_points,
+					kmeans_tx.first_point_index, kmeans_tx.last_point_index, kmeans_tx.threshold, UVM_LOW);
 			
 			finish_item(kmeans_tx);
 			

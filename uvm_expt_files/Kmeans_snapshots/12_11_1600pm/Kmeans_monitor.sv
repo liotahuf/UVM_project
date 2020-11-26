@@ -34,22 +34,12 @@ class Kmeans_monitor_dut extends uvm_monitor;
 				out_pkt.write = vif.pwrite;
 				out_pkt.data	 = (vif.pwrite ? vif.pwdata : vif.prdata);
 				out_pkt.address = vif.paddr;
-				/*
-				$display("MONITOR, vif print pwrite <%h>", vif.pwrite, UVM_LOW);
-				$display("MONITOR, vif print pwdata <%h>", vif.pwdata, UVM_LOW);
-				*/
-				//`uvm_info("got new packet at monitor:", out_pkt.sprint(), UVM_LOW)
-				//TODO - fill pkt with output data from DUT
-				//Send the transaction to the analysis port
 				
 				if (vif.interupt && vif.pready && vif.psel && ~vif.pwrite) begin
-					//start_item(mon_ap_dut.write(out_pkt)); - no idea might rmv
+					
 					mon_ap_dut.write(out_pkt);
-					//$display("MONITOR, vif print paddr  <%h>", vif.paddr, UVM_LOW);
 					$display("MONITOR, vif print prdata <%h>", vif.prdata, UVM_LOW);
 				end
-				
-				
 				
 			end
 		end
